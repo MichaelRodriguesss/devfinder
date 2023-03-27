@@ -1,10 +1,14 @@
 import "./style.scss";
+import { BsSearch } from "react-icons/bs";
 
 export const Search = () => {
-  
-return (
+  return (
     <div className="search">
-      opa
+      <div className="search_icon">
+        <BsSearch />
+        <input type="text" placeholder="Search Github Username..." />
+      </div>
+      <button>Search</button>
     </div>
-    );
-  }
+  );
+};
