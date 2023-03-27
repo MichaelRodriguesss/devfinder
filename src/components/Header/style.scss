@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 10% 30% 0 30%;
+    color: #fff;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .theme {
+        text-transform: uppercase;
+    }
+}
