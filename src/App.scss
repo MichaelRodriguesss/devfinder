@@ -13,19 +13,18 @@
 
 :root {
   --background: #141c2f;
-  --title: #fff;
-  --primary: #fff;
+  --white: #fff;
   --card: #1f2a48;
-  --button: #0079fe;
-  --search-icon: #0175f5;
-  --input-color: #d7d9e0;
-  --icon-color: #fff;
+  --blue: #0079fe;
+  --gray: #a2a7b3;
+  --background-info: #141c2f;
+  --white-two: #fff;
 }
 
 [data-theme="light"] {
   --background: #fff;
-  --title: #000;
-  --icon-color: #000;
+  --white: #000;
+  --white: #000;
 }
 
 .container {

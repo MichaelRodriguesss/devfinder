@@ -15,11 +15,11 @@
     align-items: center;
     gap: 2.5rem;
     font-size: 4rem;
-    color: var(--search-icon);
+    color: var(--blue);
     width: 100%;
 
     input {
-      color: var(--input-color);
+      color: var(--gray);
       font-size: 1.7rem;
       border: none;
       background-color: var(--card);
@@ -33,8 +33,8 @@
   }
 
   button {
-    color: var(--primary);
-    background-color: var(--button);
+    color: var(--white);
+    background-color: var(--blue);
     border: none;
     padding: 1rem 2rem;
     border-radius: 8px;
