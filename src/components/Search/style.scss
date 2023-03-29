@@ -9,6 +9,7 @@
   background-color: var(--card);
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
+  box-shadow: rgba(70, 96, 187, 0.2) 0px 16px 30px -10px;
 
   .search_icon {
     display: flex;
@@ -33,7 +34,7 @@
   }
 
   button {
-    color: var(--white);
+    color: var(--white-two);
     background-color: var(--blue);
     border: none;
     padding: 1rem 2rem;

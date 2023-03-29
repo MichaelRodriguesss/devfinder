@@ -1,14 +1,19 @@
 import "./style.scss";
 import { BsSearch } from "react-icons/bs";
 
-export const Search = () => {
+export const Search = ({ fetchUser, search, setSearch }) => {
   return (
     <div className="search">
       <div className="search_icon">
         <BsSearch />
-        <input type="text" placeholder="Search Github Username..." />
+        <input
+          type="text"
+          placeholder="Search Github Username..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
-      <button>Search</button>
+      <button onClick={fetchUser}>Search</button>
     </div>
   );
 };

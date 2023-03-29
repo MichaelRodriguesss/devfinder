@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: "Edu NSW ACT Foundation", sans-serif;
+  font-family: "Space Mono", sans-serif;
 
   body {
     -webkit-font-smoothing: antiliased;
@@ -14,17 +14,23 @@
 :root {
   --background: #141c2f;
   --white: #fff;
+  --white-icon: #fff;
   --card: #1f2a48;
   --blue: #0079fe;
   --gray: #a2a7b3;
   --background-info: #141c2f;
   --white-two: #fff;
+  --info-icons: #fff;
 }
 
 [data-theme="light"] {
-  --background: #fff;
+  --background: #f6f8ff;
   --white: #000;
-  --white: #000;
+  --white-icon: #697c9a;
+  --background-info: #f6f8ff;
+  --gray: #000;
+  --card: #fff;
+  --info-icons: #4b6a9b;
 }
 
 .container {
