@@ -5,22 +5,27 @@ import { Card } from "./components/Card/Card";
 import useLocalStorage from "use-local-storage";
 import { useState } from "react";
 import { Api } from "./providers/Api/api.js";
+import { Loading } from "./components/Loading/Loading";
 
 const App = () => {
   const [user, setUser] = useState();
   const [search, setSearch] = useState("");
   const [userNotFound, setUserNotFound] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fetchUser = async () => {
     if (search === "") {
       return alert("Preencha o campo nome!");
     }
     try {
+      setLoading(true);
       const response = await Api.get(`/${search}`);
       setUserNotFound(false);
+      setLoading(false);
       return setUser(response.data);
     } catch (err) {
       console.log(err);
+      setLoading(false);
       setUserNotFound(true);
     }
   };
@@ -47,6 +52,7 @@ const App = () => {
         toggleTheme={theme === "dark" ? true : false}
       />
       <Search setSearch={setSearch} search={search} fetchUser={fetchUser} />
+      {loading && <Loading />}
       <Card user={user} userNotFound={userNotFound} />
     </div>
   );
