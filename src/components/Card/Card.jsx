@@ -5,12 +5,12 @@ import { HiLink } from "react-icons/hi";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import moment from "moment";
 
-export const Card = ({ user, userNotFound }) => {
+export const Card = ({ user, userNotFound, loading }) => {
   const createdAt = moment(user?.created_at ?? "").format("DD/MM/YYYY");
 
   return (
     <>
-      {!userNotFound && (
+      {!loading && !userNotFound && (
         <div className="card">
           <div className="profile_image">
             <img
@@ -70,7 +70,7 @@ export const Card = ({ user, userNotFound }) => {
           </div>
         </div>
       )}
-      {userNotFound && <p className="notfound">User Not Found !</p>}
+      {!loading && userNotFound && <p className="notfound">User Not Found !</p>}
     </>
   );
 };

@@ -20,8 +20,8 @@ const App = () => {
     try {
       setLoading(true);
       const response = await Api.get(`/${search}`);
-      setUserNotFound(false);
       setLoading(false);
+      setUserNotFound(false);
       return setUser(response.data);
     } catch (err) {
       console.log(err);
@@ -53,7 +53,10 @@ const App = () => {
       />
       <Search setSearch={setSearch} search={search} fetchUser={fetchUser} />
       {loading && <Loading />}
-      <Card user={user} userNotFound={userNotFound} />
+      {user && (
+        <Card user={user} userNotFound={userNotFound} loading={loading} />
+      )}
+      {!user && <p className="notfound">Digite um usuário !</p>}
     </div>
   );
 };
