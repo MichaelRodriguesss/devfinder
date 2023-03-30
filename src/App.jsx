@@ -24,13 +24,10 @@ const App = () => {
       setUserNotFound(false);
       return setUser(response.data);
     } catch (err) {
-      console.log(err);
       setLoading(false);
       setUserNotFound(true);
     }
   };
-
-  console.log(user);
 
   const defaultTheme = window.matchMedia(
     "(prefers-colors-scheme: dark)"

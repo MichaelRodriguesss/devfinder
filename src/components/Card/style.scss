@@ -261,9 +261,14 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 570px) {
   .card {
     height: 60rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
     .profile {
       .profile_detail {
         p {

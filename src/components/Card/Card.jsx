@@ -13,10 +13,7 @@ export const Card = ({ user, userNotFound, loading }) => {
       {!loading && !userNotFound && (
         <div className="card">
           <div className="profile_image">
-            <img
-              src={user?.avatar_url ?? "./PrintScreen-devfinder.png"}
-              alt="avatar"
-            />
+            <img src={user?.avatar_url ?? ""} alt="avatar" />
           </div>
 
           <div className="profile">
