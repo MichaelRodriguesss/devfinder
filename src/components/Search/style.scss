@@ -47,3 +47,24 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .search {
+    .search_icon {
+      input {
+        font-size: 1.3rem;
+      }
+    }
+
+    button {
+      padding: 0.5rem 0.5rem;
+      border-radius: 8px;
+
+      &:hover {
+        filter: opacity(0.9);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

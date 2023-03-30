@@ -8,7 +8,7 @@ export const Search = ({ fetchUser, search, setSearch }) => {
         <BsSearch />
         <input
           type="text"
-          placeholder="Search Github Username..."
+          placeholder="Search Username"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
