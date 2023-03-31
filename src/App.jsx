@@ -22,6 +22,7 @@ const App = () => {
       const response = await Api.get(`/${search}`);
       setLoading(false);
       setUserNotFound(false);
+      setSearch("");
       return setUser(response.data);
     } catch (err) {
       setLoading(false);
